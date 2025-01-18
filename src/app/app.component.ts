@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'myFit';
@@ -15,7 +15,7 @@ export class AppComponent {
   height: any;
   gender: any;
   bmi: any;
-bmr: any;
+  bmr: any;
 
   constructor(){
     this.bmi = 0;

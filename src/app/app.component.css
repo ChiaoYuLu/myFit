@@ -1,0 +1,66 @@
+
+/* Define color variables */
+:root {
+    --caribbean-current: #006d77ff; 
+    --tiffany-blue: #83c5beff;
+    --alice-blue: #edf6f9ff;
+    --pale-dogwood: #ffddd2ff;
+    --atomic-tangerine: #e29578ff;
+  }
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: var(--alice-blue);
+    color: var(--caribbean-current);
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Style for the main header */
+  h1 {
+    text-align: center;
+    color: var(--caribbean-current);
+    background-color: var(--tiffany-blue);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Style for the container */
+  div {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: var(--pale-dogwood);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for subheaders and inputs */
+  h3 {
+    color: var(--caribbean-current);
+  }
+  
+  input[type="text"], input[type="radio"] {
+    margin-left: 10px;
+  }
+  
+  /* Style for the button */
+  button {
+    background-color: var(--atomic-tangerine);
+    color: var(--caribbean-current);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: var(--caribbean-current);
+  }
+  
+  /* Style for the result labels */
+  label {
+    font-weight: bold;
+    color: var(--tiffany-blue);
+  }
