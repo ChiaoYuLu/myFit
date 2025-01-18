@@ -15,14 +15,40 @@ export class AppComponent {
   height: any;
   gender: any;
   bmi: any;
+bmr: any;
 
   constructor(){
     this.bmi = 0;
   }
 
-  bmiCalculate(){
+  BMICalculate(){
     if (this.weight && this.height){
       this.bmi = (this.weight / ((this.height * this.height)/10000)).toFixed(1);
     }
+  }
+
+  BMRCaculate(){
+    if (this.gender && this.weight && this.height && this.age) {
+      if (this.gender === 'man') {
+        this.bmr = (
+          13.7 * this.weight +
+          5.0 * this.height -
+          6.8 * this.age +
+          66
+        ).toFixed(1);
+      } else if (this.gender === 'woman') {
+        this.bmr = (
+          9.6 * this.weight +
+          1.8 * this.height -
+          4.7 * this.age +
+          655
+        ).toFixed(1);
+      }
+    } else {
+      this.bmr = 'Please fill in all fields correctly';
+    }
+  }
+
+  TDEECalculate(){
   }
 }

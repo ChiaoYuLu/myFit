@@ -5,8 +5,10 @@
     <input type="radio" name="gender" value="woman" [(ngModel)]="gender"> Woman
   </h3>
   <h3>Age: <input type="text" [(ngModel)]="age"> </h3>
-  <h3>Weight: <input type="text" [(ngModel)]="weight"> </h3>
-  <h3>Height: <input type="text" [(ngModel)]="height"> </h3>
-  <button (click) = "bmiCalculate()">Calculate</button>
+  <h3>Weight (kg): <input type="text" [(ngModel)]="weight"> </h3>
+  <h3>Height (cm): <input type="text" [(ngModel)]="height"> </h3>
+  <button (click) = "BMICalculate()">Calculate</button>
   <h3>Your BMI is <label>{{bmi}}</label></h3>
+  <button (click)="BMRCaculate()">Calculate BMR</button>
+  <h3>Your BMR is: <label>{{bmr}}</label> </h3>
 </div>
