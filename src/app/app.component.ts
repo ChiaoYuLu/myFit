@@ -25,6 +25,7 @@ bmr: any;
     if (this.weight && this.height){
       this.bmi = (this.weight / ((this.height * this.height)/10000)).toFixed(1);
     }
+    this.BMRCaculate();
   }
 
   BMRCaculate(){
