@@ -1,13 +1,23 @@
 <h1>Welcome to MyFit</h1>
 <div>
-  <h3>Gender: 
+  <h2>Calculate your BMI, BMR, TDEE</h2>
+  <h3>Gender:</h3> 
     <input type="radio" name="gender" value="man" [(ngModel)]="gender">Man
     <input type="radio" name="gender" value="woman" [(ngModel)]="gender"> Woman
-  </h3>
-  <h3>Age: <input type="text" [(ngModel)]="age"> </h3>
-  <h3>Weight (kg): <input type="text" [(ngModel)]="weight"> </h3>
-  <h3>Height (cm): <input type="text" [(ngModel)]="height"> </h3>
-  <button (click) = "BMICalculate()">Calculate</button>
+  
+  <h3>Age: </h3> <input type="text" [(ngModel)]="age">
+  <h3>Weight (kg):</h3> <input type="text" [(ngModel)]="weight"> 
+  <h3>Height (cm):</h3> <input type="text" [(ngModel)]="height"> 
+
+  <h3>Activity Level:   </h3>
+    <input type="radio" name="activityLevel" value="sedentary" [(ngModel)]="activityLevel"> Sedentary (little or no exercise)<br>
+    <input type="radio" name="activityLevel" value="lightlyActive" [(ngModel)]="activityLevel"> Lightly active (light exercise/sports 1-3 days/week)<br>
+    <input type="radio" name="activityLevel" value="moderatelyActive" [(ngModel)]="activityLevel"> Moderately active (moderate exercise/sports 3-5 days/week)<br>
+    <input type="radio" name="activityLevel" value="veryActive" [(ngModel)]="activityLevel"> Very active (hard exercise/sports 6-7 days a week)<br>
+    <input type="radio" name="activityLevel" value="superActive" [(ngModel)]="activityLevel"> Super active (very hard exercise & physical job or 2x training)<br>
+  <br>
+  <button (click) = "AllCaculate()">Calculate</button>
   <h3>Your BMI is <label>{{bmi}}</label></h3>
-  <h3>Your BMR is: <label>{{bmr}}</label> </h3>
+  <h3>Your BMR is <label>{{bmr}}</label> </h3>
+  <h3>Your TDEE is <label>{{tdee}}</label> </h3>
 </div>

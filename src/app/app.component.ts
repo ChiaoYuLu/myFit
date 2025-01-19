@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule],
+  imports: [FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -16,16 +16,24 @@ export class AppComponent {
   gender: any;
   bmi: any;
   bmr: any;
+  tdee: any;
+  activityLevel: any;
 
   constructor(){
     this.bmi = 0;
   }
 
+  AllCaculate(){   
+    this.BMICalculate();  
+    this.BMRCaculate();
+    this.TDEECalculate();
+  }
+
+
   BMICalculate(){
     if (this.weight && this.height){
       this.bmi = (this.weight / ((this.height * this.height)/10000)).toFixed(1);
     }
-    this.BMRCaculate();
   }
 
   BMRCaculate(){
@@ -51,5 +59,19 @@ export class AppComponent {
   }
 
   TDEECalculate(){
-  }
+    if (this.activityLevel && this.bmr){
+      if (this.activityLevel === 'sedentary') {
+        this.tdee = (this.bmr * 1.2).toFixed(1);
+      } else if (this.activityLevel === 'lightlyActive') {
+        this.tdee = (this.bmr * 1.375).toFixed(1);
+      } else if (this.activityLevel === 'moderatelyActive') {
+        this.tdee = (this.bmr * 1.55).toFixed(1);
+      } else if (this.activityLevel === 'veryActive') {
+        this.tdee = (this.bmr * 1.725).toFixed(1);
+      } else if (this.activityLevel === 'superActive') {
+        this.tdee = (this.bmr * 1.9).toFixed(1);
+      }
+    } else {
+      this.tdee = 'Please fill in all fields correctly';
+  }}
 }
