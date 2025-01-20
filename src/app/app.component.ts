@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -18,6 +20,7 @@ export class AppComponent {
   bmr: any;
   tdee: any;
   activityLevel: any;
+  resultsVisible: boolean = false;
 
   constructor(){
     this.bmi = 0;
@@ -27,6 +30,7 @@ export class AppComponent {
     this.BMICalculate();  
     this.BMRCaculate();
     this.TDEECalculate();
+    this.resultsVisible = true;
   }
 
 
@@ -34,6 +38,7 @@ export class AppComponent {
     if (this.weight && this.height){
       this.bmi = (this.weight / ((this.height * this.height)/10000)).toFixed(1);
     }
+    
   }
 
   BMRCaculate(){
