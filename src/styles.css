@@ -27,7 +27,7 @@
   }
   
   /* Style for the container */
-  div {
+  .container {
     max-width: 600px;
     margin: 20px auto;
     background-color: var(--pale-dogwood);
