@@ -31,6 +31,7 @@ intakeWater: any;
     this.BMICalculate();  
     this.BMRCaculate();
     this.TDEECalculate();
+    this.intakeWaterCalculate();
     this.resultsVisible = true;
   }
 
@@ -80,4 +81,10 @@ intakeWater: any;
     } else {
       this.tdee = 'Please fill in all fields correctly';
   }}
+
+  intakeWaterCalculate(){
+    if (this.weight){
+      this.intakeWater = (this.weight * 0.033).toFixed(1);
+    }
+  }
 }
