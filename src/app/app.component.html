@@ -1,23 +1,55 @@
 <h1>Welcome to MyFit</h1>
-<div class="container">
-  <h2>Calculate your BMI, BMR, TDEE</h2>
-  <h3>Gender:</h3> 
-    <input type="radio" name="gender" value="man" [(ngModel)]="gender">Man
-    <input type="radio" name="gender" value="woman" [(ngModel)]="gender"> Woman 
-  <h3>Age: </h3> <input type="text" [(ngModel)]="age">
-  <h3>Height (cm):</h3> <input type="text" [(ngModel)]="height"> 
-  <h3>Weight (kg):</h3> <input type="text" [(ngModel)]="weight"> 
-  <h3>Activity Level:   </h3>
-    <input type="radio" name="activityLevel" value="sedentary" [(ngModel)]="activityLevel"> Sedentary (little or no exercise)<br>
-    <input type="radio" name="activityLevel" value="lightlyActive" [(ngModel)]="activityLevel"> Lightly active (light exercise/sports 1-3 days/week)<br>
-    <input type="radio" name="activityLevel" value="moderatelyActive" [(ngModel)]="activityLevel"> Moderately active (moderate exercise/sports 3-5 days/week)<br>
-    <input type="radio" name="activityLevel" value="veryActive" [(ngModel)]="activityLevel"> Very active (hard exercise/sports 6-7 days a week)<br>
-    <input type="radio" name="activityLevel" value="superActive" [(ngModel)]="activityLevel"> Super active (very hard exercise & physical job or 2x training)<br>
-  <br>
-  <button (click) = "AllCaculate()">Calculate</button>
-  <div *ngIf="resultsVisible">
-  <h3 >Your BMI is <label>{{bmi}}</label></h3>
-  <h3 >Your BMR is <label>{{bmr}}</label> </h3>
-  <h3 >Your TDEE is <label>{{tdee}}</label> </h3>
+<div>
+  <div class="container">
+    <h2>Calculate your BMI, BMR, TDEE</h2>
+    <h3>Gender:</h3> 
+      <input type="radio" name="gender" value="man" [(ngModel)]="gender">Man
+      <input type="radio" name="gender" value="woman" [(ngModel)]="gender"> Woman 
+    <h3>Age: </h3> <input type="text" [(ngModel)]="age">
+    <h3>Height (cm):</h3> <input type="text" [(ngModel)]="height"> 
+    <h3>Weight (kg):</h3> <input type="text" [(ngModel)]="weight"> 
+    <h3>Activity Level:   </h3>
+      <input type="radio" name="activityLevel" value="sedentary" [(ngModel)]="activityLevel"> Sedentary (little or no exercise)<br>
+      <input type="radio" name="activityLevel" value="lightlyActive" [(ngModel)]="activityLevel"> Lightly active (light exercise/sports 1-3 days/week)<br>
+      <input type="radio" name="activityLevel" value="moderatelyActive" [(ngModel)]="activityLevel"> Moderately active (moderate exercise/sports 3-5 days/week)<br>
+      <input type="radio" name="activityLevel" value="veryActive" [(ngModel)]="activityLevel"> Very active (hard exercise/sports 6-7 days a week)<br>
+      <input type="radio" name="activityLevel" value="superActive" [(ngModel)]="activityLevel"> Super active (very hard exercise & physical job or 2x training)<br>
+    <br>
+    <button (click) = "AllCaculate()">Calculate</button>
+    <div *ngIf="resultsVisible">
+      <h3 >Your BMI is approximately <label>{{bmi}}</label></h3>
+      <h3 >Your BMR is approximately <label>{{bmr}}</label> </h3>
+      <h3 >Your TDEE for the day is approximately <label>{{tdee}}</label> </h3>
+    </div>
+  </div>
+  <div class="container">
+    <h3>What is BMI (Body Mass Index) ?</h3>
+      <p>BMI is a simple calculation used to determine if your weight is appropriate for your height. It is commonly used as a general indicator of healthy body weight.
+      <h4>Formulas:</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMI = weight (kg) / height (m)<sup>2</sup></p>
+      <h4>Categories:</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Underweight: BMI < 18.5
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Normal weight: 18.5 ≤ BMI < 24.9
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Overweight: 25 ≤ BMI < 29.9
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Obese: BMI ≥ 30
+    </p>
+    <h3>What is BMR (Basal Metabolic Rate) ?</h3>
+      <p>BMR is the number of calories your body requires to perform its basic functions, like breathing, circulating blood, and maintaining body temperature, while at complete rest.</p>
+      <h4>Formulas:</h4>
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• For Men: </P>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR = 13.7 × weight (kg) + 5.0 × height (cm) − 6.8 × age (years) + 66</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• For Women:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR = 9.6 × weight (kg) + 1.8 × height (cm) − 4.7 × age (years) + 655</p>
+    
+    <h3>What is TDEE (Total Daily Energy Expenditure) ?</h3>
+      <p>TDEE is the total number of calories that your body requires in a day in order to maintain your current weight. This is also known as your maintenance level.</p>
+      <h4>Formulas:</h4>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TDEE = BMR × Activity Factor</p>
+      <h4>Activity Factors:</h4>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Sedentary (little/no exercise): 1.2</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Lightly active (light exercise/sports 1-3 days/week): 1.375</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Moderately active (moderate exercise/sports 3-5 days/week): 1.55</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Very active (hard exercise/sports 6-7 days/week): 1.725</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Super active (very hard exercise/physical job): 1.9</p>
   </div>
 </div>

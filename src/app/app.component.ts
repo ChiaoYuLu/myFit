@@ -21,6 +21,7 @@ export class AppComponent {
   tdee: any;
   activityLevel: any;
   resultsVisible: boolean = false;
+intakeWater: any;
 
   constructor(){
     this.bmi = 0;

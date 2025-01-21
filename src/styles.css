@@ -78,5 +78,6 @@
   /* Style for the result labels */
   label {
     font-weight: bold;
-    color: var(--tiffany-blue);
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
   }
