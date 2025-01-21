@@ -1,7 +1,8 @@
 <h1>Welcome to MyFit</h1>
 <div>
   <div class="container">
-    <h2>Calculate your BMI, BMR, TDEE</h2>
+    <h2>Calculate your </h2>
+    <h2>BMI, BMR, TDEE, Daily Water Intake</h2>
     <h3>Gender:</h3> 
       <input type="radio" name="gender" value="man" [(ngModel)]="gender">Man
       <input type="radio" name="gender" value="woman" [(ngModel)]="gender"> Woman 
@@ -34,6 +35,7 @@
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Overweight: 25 ≤ BMI < 29.9
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Obese: BMI ≥ 30
     </p>
+<br>
     <h3>What is BMR (Basal Metabolic Rate) ?</h3>
       <p>BMR is the number of calories your body requires to perform its basic functions, like breathing, circulating blood, and maintaining body temperature, while at complete rest.</p>
       <h4>Formulas:</h4>
@@ -41,7 +43,7 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR = 13.7 × weight (kg) + 5.0 × height (cm) − 6.8 × age (years) + 66</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• For Women:</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR = 9.6 × weight (kg) + 1.8 × height (cm) − 4.7 × age (years) + 655</p>
-    
+ <br>
     <h3>What is TDEE (Total Daily Energy Expenditure) ?</h3>
       <p>TDEE is the total number of calories that your body requires in a day in order to maintain your current weight. This is also known as your maintenance level.</p>
       <h4>Formulas:</h4>
@@ -52,5 +54,10 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Moderately active (moderate exercise/sports 3-5 days/week): 1.55</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Very active (hard exercise/sports 6-7 days/week): 1.725</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Super active (very hard exercise/physical job): 1.9</p>
-  </div>
+ <br>
+    <h3>What is Daily Water Intake ?</h3>
+      <p>Water is essential for life and maintaining optimal health. The human body is composed of approximately 60% water. It is recommended to drink at least 8 glasses of water per day.</p>
+      <h4>Formulas:</h4>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water Intake = weight (kg) × 0.033</p>
+    </div>
 </div>
