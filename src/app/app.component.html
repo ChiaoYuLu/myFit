@@ -18,10 +18,10 @@
     <br>
     <button (click) = "AllCaculate()">Calculate</button>
     <div *ngIf="resultsVisible">
-      <h3 >Your BMI is approximately <label>{{bmi}}</label></h3>
-      <h3 >Your BMR is approximately <label>{{bmr}}</label> </h3>
-      <h3 >Your TDEE for the day is approximately <label>{{tdee}}</label> </h3>
-      <h3 >You should drink <label>{{intakeWater}}</label> liter per day</h3>
+      <h3 >Your BMI is <label>{{bmi}}</label> which is <label>{{BMIcategories}}</label></h3>
+      <h3 >Your BMR is <label>{{bmr}}</label> </h3>
+      <h3 >Your TDEE is <label>{{tdee}}</label> </h3>
+      <h3 >You should drink <label>{{intakeWater}}</label> liters water per day</h3>
     </div>
   </div>
   <div class="container">

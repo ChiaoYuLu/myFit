@@ -22,6 +22,7 @@ export class AppComponent {
   activityLevel: any;
   resultsVisible: boolean = false;
 intakeWater: any;
+BMIcategories: any;
 
   constructor(){
     this.bmi = 0;
@@ -39,6 +40,15 @@ intakeWater: any;
   BMICalculate(){
     if (this.weight && this.height){
       this.bmi = (this.weight / ((this.height * this.height)/10000)).toFixed(1);
+    }
+    if (this.bmi < 18.5){
+      this.BMIcategories = "Underweight";
+    } else if (this.bmi >= 18.5 && this.bmi <= 24.9){
+      this.BMIcategories = "Normal weight";
+    } else if (this.bmi >= 25 && this.bmi <= 29.9){
+      this.BMIcategories = "Overweight";
+    } else if (this.bmi >= 30){
+      this.BMIcategories = "Obesity";
     }
     
   }
