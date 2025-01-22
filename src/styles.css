@@ -9,7 +9,7 @@
     --atomic-tangerine: #e29578ff;
   }
 
-.body {
+  body {
     font-family: Arial, sans-serif;
     background-color: var(--alice-blue);
     color: var(--caribbean-current);
