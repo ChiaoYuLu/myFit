@@ -1,0 +1,22 @@
+{
+    "TITLE": "Bereken je",
+    "SUBTITLE": "BMI, BMR, TDEE, Dagelijkse waterinname",
+    "GENDER": "Geslacht",
+    "MAN": "Man",
+    "WOMAN": "Vrouw",
+    "AGE": "Leeftijd",
+    "HEIGHT": "Lengte (cm)",
+    "WEIGHT": "Gewicht (kg)",
+    "ACTIVITY_LEVEL": "Activiteitsniveau",
+    "SEDENTARY": "Zittend (weinig of geen oefening)",
+    "LIGHTLY_ACTIVE": "Licht actief (lichte oefening/sport 1-3 dagen/week)",
+    "MODERATELY_ACTIVE": "Matig actief (matige oefening/sport 3-5 dagen/week)",
+    "VERY_ACTIVE": "Zeer actief (zware oefening/sport 6-7 dagen per week)",
+    "SUPER_ACTIVE": "Super actief (zeer zware oefening en fysieke baan of 2x training)",
+    "CALCULATE": "Bereken",
+    "YOUR_BMI": "Je BMI is",
+    "YOUR_BMR": "Je BMR is",
+    "YOUR_TDEE": "Je TDEE is",
+    "WATER_INTAKE": "Je moet drinken",
+    "LITERS_WATER": "liter water per dag"
+  }

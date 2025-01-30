@@ -1,0 +1,22 @@
+{
+"TITLE": "Calculate your",
+"SUBTITLE": "BMI, BMR, TDEE, Daily Water Intake",
+"GENDER": "Gender",
+"MAN": "Man",
+"WOMAN": "Woman",
+"AGE": "Age",
+"HEIGHT": "Height (cm)",
+"WEIGHT": "Weight (kg)",
+"ACTIVITY_LEVEL": "Activity Level",
+"SEDENTARY": "Sedentary (little or no exercise)",
+"LIGHTLY_ACTIVE": "Lightly active (light exercise/sports 1-3 days/week)",
+"MODERATELY_ACTIVE": "Moderately active (moderate exercise/sports 3-5 days/week)",
+"VERY_ACTIVE": "Very active (hard exercise/sports 6-7 days a week)",
+"SUPER_ACTIVE": "Super active (very hard exercise & physical job or 2x training)",
+"CALCULATE": "Calculate",
+"YOUR_BMI": "Your BMI is",
+"YOUR_BMR": "Your BMR is",
+"YOUR_TDEE": "Your TDEE is",
+"WATER_INTAKE": "You should drink",
+"LITERS_WATER": "liters water per day"
+}
