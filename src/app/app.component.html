@@ -1,27 +1,30 @@
 <h1>Welcome to MyFit</h1>
 <div>
   <div class="container">
-    <h2>Calculate your </h2>
-    <h2>BMI, BMR, TDEE, Daily Water Intake</h2>
-    <h3>Gender:</h3> 
-      <input type="radio" name="gender" value="man" [(ngModel)]="gender">Man
-      <input type="radio" name="gender" value="woman" [(ngModel)]="gender"> Woman 
-    <h3>Age: </h3> <input type="text" [(ngModel)]="age">
-    <h3>Height (cm):</h3> <input type="text" [(ngModel)]="height"> 
-    <h3>Weight (kg):</h3> <input type="text" [(ngModel)]="weight"> 
-    <h3>Activity Level:   </h3>
-      <input type="radio" name="activityLevel" value="sedentary" [(ngModel)]="activityLevel"> Sedentary (little or no exercise)<br>
-      <input type="radio" name="activityLevel" value="lightlyActive" [(ngModel)]="activityLevel"> Lightly active (light exercise/sports 1-3 days/week)<br>
-      <input type="radio" name="activityLevel" value="moderatelyActive" [(ngModel)]="activityLevel"> Moderately active (moderate exercise/sports 3-5 days/week)<br>
-      <input type="radio" name="activityLevel" value="veryActive" [(ngModel)]="activityLevel"> Very active (hard exercise/sports 6-7 days a week)<br>
-      <input type="radio" name="activityLevel" value="superActive" [(ngModel)]="activityLevel"> Super active (very hard exercise & physical job or 2x training)<br>
+    <button (click)="switchLanguage('zh')">中文</button>
+    <button (click)="switchLanguage('nl')">Nederlands</button>
+    <button (click)="switchLanguage('en')">English</button>
+    <h2>{{ 'TITLE' | translate }}</h2>
+    <h2>{{ 'SUBTITLE' | translate }}</h2>
+    <h3>{{ 'GENDER' | translate }}:</h3>
+    <input type="radio" name="gender" value="man" [(ngModel)]="gender">{{ 'MAN' | translate }}
+    <input type="radio" name="gender" value="woman" [(ngModel)]="gender">{{ 'WOMAN' | translate }}
+    <h3>{{ 'AGE' | translate }}: </h3> <input type="text" [(ngModel)]="age">
+    <h3>{{ 'HEIGHT' | translate }}:</h3> <input type="text" [(ngModel)]="height">
+    <h3>{{ 'WEIGHT' | translate }}:</h3> <input type="text" [(ngModel)]="weight">
+    <h3>{{ 'ACTIVITY_LEVEL' | translate }}:</h3>
+    <input type="radio" name="activityLevel" value="sedentary" [(ngModel)]="activityLevel">{{ 'SEDENTARY' | translate }}<br>
+    <input type="radio" name="activityLevel" value="lightlyActive" [(ngModel)]="activityLevel">{{ 'LIGHTLY_ACTIVE' | translate }}<br>
+    <input type="radio" name="activityLevel" value="moderatelyActive" [(ngModel)]="activityLevel">{{ 'MODERATELY_ACTIVE' | translate }}<br>
+    <input type="radio" name="activityLevel" value="veryActive" [(ngModel)]="activityLevel">{{ 'VERY_ACTIVE' | translate }}<br>
+    <input type="radio" name="activityLevel" value="superActive" [(ngModel)]="activityLevel">{{ 'SUPER_ACTIVE' | translate }}<br>
     <br>
-    <button (click) = "AllCaculate()">Calculate</button>
+    <button (click)="AllCaculate()">{{ 'CALCULATE' | translate }}</button>
     <div *ngIf="resultsVisible">
-      <h3 >Your BMI is <label>{{bmi}}</label> which is <label>{{BMIcategories}}</label></h3>
-      <h3 >Your BMR is <label>{{bmr}}</label> </h3>
-      <h3 >Your TDEE is <label>{{tdee}}</label> </h3>
-      <h3 >You should drink <label>{{intakeWater}}</label> liters water per day</h3>
+      <h3>{{ 'YOUR_BMI' | translate }} <label>{{bmi}}</label> which is <label>{{BMIcategories}}</label></h3>
+      <h3>{{ 'YOUR_BMR' | translate }} <label>{{bmr}}</label></h3>
+      <h3>{{ 'YOUR_TDEE' | translate }} <label>{{tdee}}</label></h3>
+      <h3>{{ 'WATER_INTAKE' | translate }} <label>{{intakeWater}}</label> {{ 'LITERS_WATER' | translate }}</h3>
     </div>
   </div>
   <div class="container">

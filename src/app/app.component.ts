@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule  } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -21,13 +22,16 @@ export class AppComponent {
   tdee: any;
   activityLevel: any;
   resultsVisible: boolean = false;
-intakeWater: any;
-BMIcategories: any;
+  intakeWater: any;
+  BMIcategories: any;
+  constructor(private translate: TranslateService) {
+  this.translate.setDefaultLang('en');
+  this.translate.use('en');
+}
 
-  constructor(){
-    this.bmi = 0;
-  }
-
+switchLanguage(language: string) {
+  this.translate.use(language);
+}
   AllCaculate(){   
     this.BMICalculate();  
     this.BMRCaculate();
