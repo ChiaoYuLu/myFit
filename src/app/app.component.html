@@ -1,4 +1,4 @@
-<h1>Welcome to MyFit</h1>
+<h1>{{ 'WELCOME_TO_MYFIT' | translate }}</h1>
 <div>
   <div class="container">
     <select (change)="onLanguageChange($event)" class="language-dropdown" style="float: right;">
@@ -23,46 +23,43 @@
     <br>
     <button (click)="AllCaculate()">{{ 'CALCULATE' | translate }}</button>
     <div *ngIf="resultsVisible">
-      <h3>{{ 'YOUR_BMI' | translate }} <label>{{bmi}}</label> which is <label>{{BMIcategories}}</label></h3>
-      <h3>{{ 'YOUR_BMR' | translate }} <label>{{bmr}}</label></h3>
-      <h3>{{ 'YOUR_TDEE' | translate }} <label>{{tdee}}</label></h3>
+      <h3>{{ 'YOUR_BMI' | translate }} <label>{{bmi}}</label> {{ 'WHICH_IS' | translate }} <label>{{ BMIcategories | translate }}</label></h3>
+      <h3>{{ 'YOUR_BMR' | translate }} <label>{{bmr}}</label> {{ 'CALORIES' | translate }}</h3>
+      <h3>{{ 'YOUR_TDEE' | translate }} <label>{{tdee}}</label>  {{ 'CALORIES' | translate }}</h3>
       <h3>{{ 'WATER_INTAKE' | translate }} <label>{{intakeWater}}</label> {{ 'LITERS_WATER' | translate }}</h3>
     </div>
   </div>
   <div class="container">
-    <h3>What is BMI (Body Mass Index) ?</h3>
-      <p>BMI is a simple calculation used to determine if your weight is appropriate for your height. It is commonly used as a general indicator of healthy body weight.
-      <h4>Formulas:</h4>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMI = weight (kg) / height (m)<sup>2</sup></p>
-      <h4>Categories:</h4>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Underweight: BMI < 18.5
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Normal weight: 18.5 ≤ BMI < 24.9
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Overweight: 25 ≤ BMI < 29.9
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Obese: BMI ≥ 30
-    </p>
-<br>
-    <h3>What is BMR (Basal Metabolic Rate) ?</h3>
-      <p>BMR is the number of calories your body requires to perform its basic functions, like breathing, circulating blood, and maintaining body temperature, while at complete rest.</p>
-      <h4>Formulas:</h4>
-        <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• For Men: </P>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR = 13.7 × weight (kg) + 5.0 × height (cm) − 6.8 × age (years) + 66</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• For Women:</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BMR = 9.6 × weight (kg) + 1.8 × height (cm) − 4.7 × age (years) + 655</p>
- <br>
-    <h3>What is TDEE (Total Daily Energy Expenditure) ?</h3>
-      <p>TDEE is the total number of calories that your body requires in a day in order to maintain your current weight. This is also known as your maintenance level.</p>
-      <h4>Formulas:</h4>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TDEE = BMR × Activity Factor</p>
-      <h4>Activity Factors:</h4>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Sedentary (little/no exercise): 1.2</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Lightly active (light exercise/sports 1-3 days/week): 1.375</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Moderately active (moderate exercise/sports 3-5 days/week): 1.55</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Very active (hard exercise/sports 6-7 days/week): 1.725</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Super active (very hard exercise/physical job): 1.9</p>
- <br>
-    <h3>What is Daily Water Intake ?</h3>
-      <p>Water is essential for life and maintaining optimal health. The human body is composed of approximately 60% water. It is recommended to drink at least 8 glasses of water per day.</p>
-      <h4>Formulas:</h4>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Water Intake = weight (kg) × 0.033</p>
-    </div>
+    <h3>{{ 'WHAT_IS_BMI' | translate }}</h3>
+    <p>{{ 'BMI_DESCRIPTION' | translate }}</p>
+    <h4>{{ 'FORMULAS' | translate }}:</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ 'BMI_FORMULA' | translate }}</p>
+    <h4>{{ 'CATEGORIES' | translate }}:</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'UNDERWEIGHT' | translate }}: BMI < 18.5</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'NORMAL_WEIGHT' | translate }}: 18.5 ≤ BMI < 24.9</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'OVERWEIGHT' | translate }}: 25 ≤ BMI < 29.9</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'OBESE' | translate }}: BMI ≥ 30</p>
+    <br>
+    <h3>{{ 'WHAT_IS_BMR' | translate }}</h3>
+    <p>{{ 'BMR_DESCRIPTION' | translate }}</p>
+    <h4>{{ 'FORMULAS' | translate }}:</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'BMR_FORMULA_MEN' | translate }}</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'BMR_FORMULA_WOMEN' | translate }}</p>
+    <br>
+    <h3>{{ 'WHAT_IS_TDEE' | translate }}</h3>
+    <p>{{ 'TDEE_DESCRIPTION' | translate }}</p>
+    <h4>{{ 'FORMULAS' | translate }}:</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ 'TDEE_FORMULA' | translate }}</p>
+    <h4>{{ 'ACTIVITY_FACTORS' | translate }}:</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'SEDENTARY' | translate }}: 1.2</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'LIGHTLY_ACTIVE' | translate }}: 1.375</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'MODERATELY_ACTIVE' | translate }}: 1.55</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'VERY_ACTIVE' | translate }}: 1.725</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• {{ 'SUPER_ACTIVE' | translate }}: 1.9</p>
+    <br>
+    <h3>{{ 'WHAT_IS_DAILY_WATER_INTAKE' | translate }}</h3>
+    <p>{{ 'WATER_DESCRIPTION' | translate }}</p>
+    <h4>{{ 'FORMULAS' | translate }}:</h4>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ 'WATER_FORMULA' | translate }}</p>
+  </div>
 </div>
