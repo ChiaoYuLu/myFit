@@ -26,7 +26,7 @@
 "BMI_FORMULA": "BMI = weight (kg) / height (m)^2",
 "UNDERWEIGHT": "Underweight",
 "NORMAL_WEIGHT": "Normal weight",
-"OVERWEIGHT": "Overweight9",
+"OVERWEIGHT": "Overweight",
 "OBESE": "Obese",
 
 
