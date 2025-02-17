@@ -2,9 +2,9 @@
 <div>
   <div class="container">
     <select (change)="onLanguageChange($event)" class="language-dropdown" style="float: right;">
-      <option value="zh">中文</option>
-      <option value="nl">Nederlands</option>
       <option value="en" selected>English</option>
+      <option value="nl">Nederlands</option>
+      <option value="zh">中文</option>
     </select>
     <h2>{{ 'TITLE' | translate }}</h2>
     <h2>{{ 'SUBTITLE' | translate }}</h2>
