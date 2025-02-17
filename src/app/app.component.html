@@ -1,9 +1,11 @@
 <h1>Welcome to MyFit</h1>
 <div>
   <div class="container">
-    <button (click)="switchLanguage('zh')">中文</button>
-    <button (click)="switchLanguage('nl')">Nederlands</button>
-    <button (click)="switchLanguage('en')">English</button>
+    <select (change)="onLanguageChange($event)" class="language-dropdown" style="float: right;">
+      <option value="zh">中文</option>
+      <option value="nl">Nederlands</option>
+      <option value="en" selected>English</option>
+    </select>
     <h2>{{ 'TITLE' | translate }}</h2>
     <h2>{{ 'SUBTITLE' | translate }}</h2>
     <h3>{{ 'GENDER' | translate }}:</h3>

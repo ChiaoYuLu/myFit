@@ -29,6 +29,12 @@ export class AppComponent {
   this.translate.use('en');
 }
 
+onLanguageChange(event: Event) {
+  const selectElement = event.target as HTMLSelectElement; // Cast EventTarget to HTMLSelectElement
+  const selectedLanguage = selectElement.value; // Get the value of the selected option
+  this.switchLanguage(selectedLanguage); // Call the switchLanguage method with the selected value
+}
+
 switchLanguage(language: string) {
   this.translate.use(language);
 }
