@@ -1,5 +1,6 @@
 {
-    "TITLE": "計算你的",
+  "WELCOME_TO_MYFIT" : "歡迎來到MyFit",  
+  "TITLE": "計算你的",
     "SUBTITLE": "BMI, BMR, TDEE, 每日飲水量",
     "GENDER": "性别",
     "MAN": "男",
